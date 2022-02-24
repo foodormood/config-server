@@ -11,7 +11,7 @@ spring:
     active: dev
   security:
     user:
-      name: config
+      name: config-server
       password: 11223344
   application:
     name: config

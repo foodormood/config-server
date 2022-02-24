@@ -2,13 +2,16 @@ spring:
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/shared
+        git:
+          uri: https://github.com/vanrin/config-repo
+          force-pull: true
+          default-label: main
 
   profiles:
-    active: native
+    active: dev
   security:
     user:
+      name: config
       password: 11223344
   application:
     name: config
